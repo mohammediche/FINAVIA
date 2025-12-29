@@ -2,12 +2,12 @@ interface SendEmailProps {
     to: { email: string; name: string }[];
     subject: string;
     htmlContent: string;
-    sender?: { name: string; email: string };
     replyTo?: { email: string; name: string };
 }
 
-export async function sendEmail({ to, subject, htmlContent, sender, replyTo }: SendEmailProps) {
+export async function sendEmail({ to, subject, htmlContent, replyTo }: SendEmailProps) {
     const apiKey = process.env.BREVO_API_KEY;
+    
 
     if (!apiKey) throw new Error("BREVO_API_KEY is missing");
 
@@ -19,13 +19,15 @@ export async function sendEmail({ to, subject, htmlContent, sender, replyTo }: S
             'content-type': 'application/json',
         },
         body: JSON.stringify({
-            sender: sender || { name: "Finavia", email: "mohammediche@gmail.com" },
+            sender: { name: "Finavia", email: "mohammediche@gmail.com" },
             to,
             subject,
             htmlContent,
             replyTo: replyTo || undefined
         }),
     });
+    console.log("response???", response);
+    
 
     if (!response.ok) {
         const error = await response.json();

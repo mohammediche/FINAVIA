@@ -187,7 +187,7 @@ export default function ClientChallengesPage() {
                 title={<>Découvrez notre réponse concrète <br/> à vos enjeux</>}
                 description="Ne laissez plus ces défis freiner votre développement. Nos experts ont les solutions pour structurer et accélérer votre finance."
                 buttonText="Contactez-nous maintenant"
-                buttonHref="#contact-footer"
+                buttonHref="/contact"
             />
         </div>
     );

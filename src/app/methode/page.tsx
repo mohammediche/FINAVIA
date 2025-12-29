@@ -161,7 +161,7 @@ export default function MethodPage() {
                 variant="pink"
                 title="Planifiez un diagnostic gratuit"
                 description="30 minutes pour échanger sur vos enjeux et identifier les leviers de performance."
-                buttonHref="#contact-footer"
+                buttonHref="/contact"
             />
         </div>
     );

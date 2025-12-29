@@ -205,18 +205,18 @@ export const FAQ_DOMAINS = Object.keys(FAQ_DATA);
 export const NAVIGATION_LINKS = [
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/about" },
-    { name: "Notre Méthode", href: "/methode" },
+    { name: "Notre méthode", href: "/methode" },
     { name: "Nos expertises", href: "/expertises" },
     { name: "Enjeux clients", href: "/enjeux-clients" },
     { name: "Partenaires", href: "/partenaires" },
 ];
 
 export const EXPERTISE_LINKS = [
-    { name: "Audit", href: "/expertise/audit" },
-    { name: "Structuration de la Fonction Finance", href: "/expertise/structuration-finance" },
-    { name: "Digitalisation et Automatisation", href: "/expertise/digitalisation" },
-    { name: "Pilotage Financier et Performance", href: "/expertise/pilotage-financier" },
-    { name: "Expertises Financières Avancées", href: "/expertise/expertises-avancees" },
+    { name: "Audit", href: "/expertises/audit" },
+    { name: "Structuration de la Fonction Finance", href: "/expertises/structuration-finance" },
+    { name: "Digitalisation et Automatisation", href: "/expertises/digitalisation" },
+    { name: "Pilotage Financier et Performance", href: "/expertises/pilotage-financier" },
+    { name: "Expertises Financières Avancées", href: "/expertises/expertises-avancees" },
 ];
 
 export const LEGAL_LINKS = [
@@ -340,11 +340,11 @@ export const METHODOLOGY_PAGE_DATA = {
         { icon: Zap, title: "Productivité", desc: "Des processus fluides et sans erreurs." }
     ],
     poles: [
-        { title: "Audit", icon: BarChart3, path: "/expertise/audit" },
-        { title: "Structuration", icon: Settings, path: "/expertise/structuration-finance" },
-        { title: "Digitalisation", icon: Zap, path: "/expertise/digitalisation" },
-        { title: "Pilotage", icon: PieChart, path: "/expertise/pilotage-financier" },
-        { title: "Expertises Avancées", icon: Rocket, path: "/expertise/expertises-avancees" }
+        { title: "Audit", icon: BarChart3, path: "/expertises/audit" },
+        { title: "Structuration", icon: Settings, path: "/expertises/structuration-finance" },
+        { title: "Digitalisation", icon: Zap, path: "/expertises/digitalisation" },
+        { title: "Pilotage", icon: PieChart, path: "/expertises/pilotage-financier" },
+        { title: "Expertises Avancées", icon: Rocket, path: "/expertises/expertises-avancees" }
     ]
 };
 

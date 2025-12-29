@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -77,14 +78,16 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-                            <motion.button
-                                whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(229, 25, 144, 0.3)' }}
-                                whileTap={{ scale: 0.95 }}
-                                className="px-8 py-4 bg-[#e51990] text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg transition-all duration-300"
-                            >
-                                Démarrer maintenant
-                                <ArrowRight size={20} />
-                            </motion.button>
+                            <Link href="/contact">
+                                <motion.div
+                                    whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(229, 25, 144, 0.3)' }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="px-8 py-4 bg-[#e51990] text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg transition-all duration-300 cursor-pointer"
+                                >
+                                    Démarrer maintenant
+                                    <ArrowRight size={20} />
+                                </motion.div>
+                            </Link>
 
                             <motion.button
                                 whileHover={{ scale: 1.05 }}

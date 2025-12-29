@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import Image from 'next/image';
+import Link from 'next/link';
 import { CASE_STUDIES } from '@/lib/data';
 
 const CaseStudies = () => {
@@ -130,10 +131,10 @@ const CaseStudies = () => {
                                             </ul>
 
                                             <div className="pt-4 border-t border-gray-100">
-                                                <button className="text-[#e51990] font-bold flex items-center gap-2 hover:gap-3 transition-all uppercase text-sm tracking-wide">
+                                                <Link href="#contact" className="text-[#e51990] font-bold flex items-center gap-2 hover:gap-3 transition-all uppercase text-sm tracking-wide">
                                                     Demander un devis
                                                     <ArrowRight size={18} />
-                                                </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </motion.div>
