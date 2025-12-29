@@ -72,7 +72,7 @@ const FAQ = () => {
                                     key={index}
                                     title={item.q}
                                     isOpen={openQuestionIndex === index}
-                                    onToggle={() => toggleQuestion(openQuestionIndex === index ? null : index)}
+                                    onToggle={() => toggleQuestion(index)}
                                     variant="faq"
                                 >
 

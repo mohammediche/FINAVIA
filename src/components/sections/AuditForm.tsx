@@ -3,24 +3,26 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {contactService} from "@/services/contactService";
 import {toast} from "@/hooks/use-toast";
+import { AuditFormData } from '@/types';
 
 export const AuditForm = ({ onSuccess }: { onSuccess: () => void }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
 
         const formData = new FormData(e.currentTarget);
-        const data = Object.fromEntries(formData.entries());
+        const data = Object.fromEntries(formData.entries()) as unknown as AuditFormData;
 
         try {
             await contactService.sendAudit(data);
 
             toast({ variant: "success", title: "Audit Envoyé !" });
             onSuccess();
-        } catch (error: any) {
-            toast({ variant: "destructive", title: "Erreur", description: error.message });
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'Une erreur est survenue';
+            toast({ variant: "destructive", title: "Erreur", description: errorMessage });
         } finally {
             setIsSubmitting(false);
         }

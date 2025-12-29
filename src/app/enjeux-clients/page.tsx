@@ -164,7 +164,6 @@ export default function ClientChallengesPage() {
                                     {filteredQuestions.map((item, idx) => (
                                         <AccordionItem
                                             key={idx}
-                                            id={idx}
                                             title={item.q}
                                             isOpen={openQuestion === idx}
                                             onToggle={() => setOpenQuestion(openQuestion === idx ? null : idx)}

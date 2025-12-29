@@ -209,7 +209,6 @@ export const NAVIGATION_LINKS = [
     { name: "Nos expertises", href: "/expertises" },
     { name: "Enjeux clients", href: "/enjeux-clients" },
     { name: "Partenaires", href: "/partenaires" },
-    ,
 ];
 
 export const EXPERTISE_LINKS = [

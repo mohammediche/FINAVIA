@@ -1,4 +1,4 @@
-import { ContactFormData , AuditFormData, ResourceFormData } from '@/types/contact';
+import { ContactFormData , AuditFormData, ResourceFormData } from '@/types';
 
 export const contactService = {
     async sendMessage(data: ContactFormData) {
@@ -16,7 +16,7 @@ export const contactService = {
     },
 
     // Private helper to avoid repeating the fetch code
-    async _post(url: string, body: any) {
+    async _post(url: string, body: ContactFormData | AuditFormData | ResourceFormData) {
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
