@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Linkedin, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { ABOUT_PAGE_DATA } from '@/lib/data';
@@ -88,10 +89,11 @@ export default function AboutPage() {
                         {ABOUT_PAGE_DATA.founders.map((founder, idx) => (
                             <div key={idx} className="bg-white/5 backdrop-blur-md rounded-[2rem] overflow-hidden border border-white/10 flex flex-col md:flex-row group hover:bg-white/10 transition-colors duration-300">
                                 <div className="md:w-2/5 relative overflow-hidden h-80 md:h-auto">
-                                    <img
+                                    <Image
                                         src={founder.image}
                                         alt={founder.name}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#07036e]/90 to-transparent md:hidden" />
                                 </div>
@@ -119,9 +121,10 @@ export default function AboutPage() {
             {/* 4. CSR & Commitments Section */}
             <section className="py-24 px-6 relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <Image
                         alt="Lush green forest background representing ecology"
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                         src="https://images.unsplash.com/photo-1591997520347-4e4615c4235e"
                     />
                     <div className="absolute inset-0 bg-green-950/80 mix-blend-multiply"></div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { METHODOLOGY_PAGE_DATA } from '@/lib/data';
@@ -37,11 +38,14 @@ export default function MethodPage() {
                         className="relative"
                     >
                         <div className="absolute inset-0 bg-[#e51990] rounded-[2rem] transform rotate-3 blur-lg opacity-30"></div>
-                        <img
-                            src="https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/4341c9f82ada204c555e63399ddc6dbe.jpg"
-                            alt="Méthodologie Finavia"
-                            className="relative rounded-[2rem] shadow-2xl border-4 border-white/10 w-full object-cover h-[450px]"
-                        />
+                        <div className="relative rounded-[2rem] shadow-2xl border-4 border-white/10 w-full h-[450px] overflow-hidden">
+                            <Image
+                                src="https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/4341c9f82ada204c555e63399ddc6dbe.jpg"
+                                alt="Méthodologie Finavia"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
                     </motion.div>
                 </div>
             </section>
@@ -72,10 +76,11 @@ export default function MethodPage() {
                                 {/* Visual Image Side */}
                                 <div className="flex-1 w-full lg:w-1/2 relative group">
                                     <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-100 aspect-[4/3] bg-white">
-                                        <img
+                                        <Image
                                             src={step.imgSrc}
                                             alt={step.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                         <div className="absolute top-6 left-6 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg text-2xl font-bold text-[#e51990]">
                                             0{step.id}

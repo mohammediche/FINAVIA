@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Settings, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import FloatingStars from '@/components/ui/FloatingStars';
@@ -22,7 +23,7 @@ export default function PartnersPage() {
             <section className="relative bg-[#07036e] text-white pt-48 pb-24 px-6 overflow-hidden rounded-b-[3rem]">
                 <FloatingStars color="white" />
                 <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-                    <img alt="Modern financial software" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1571677246347-5040036b95cc" />
+                    <Image alt="Modern financial software" fill className="object-cover" src="https://images.unsplash.com/photo-1571677246347-5040036b95cc" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#07036e] via-[#07036e]/90 to-transparent z-0 pointer-events-none"></div>
 
@@ -43,8 +44,8 @@ export default function PartnersPage() {
                     </motion.div>
 
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative hidden lg:block">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Dashboard" className="w-full h-full object-cover" />
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500 aspect-[4/3]">
+                            <Image src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Dashboard" fill className="object-cover" />
                             <div className="absolute inset-0 bg-[#07036e]/20"></div>
                         </div>
                     </motion.div>
@@ -69,7 +70,9 @@ export default function PartnersPage() {
                                 <p className="text-gray-600 mb-6 text-sm">{obj.desc}</p>
                                 <div className="flex flex-wrap gap-4 items-center opacity-70 grayscale group-hover:grayscale-0 transition-all">
                                     {obj.logos.map((logo, lIdx) => (
-                                        <img key={lIdx} src={logo} alt="Partner" className="h-6 w-auto object-contain max-w-[100px]" />
+                                        <div key={lIdx} className="relative h-6 w-[100px]">
+                                            <Image src={logo} alt="Partner" fill className="object-contain" />
+                                        </div>
                                     ))}
                                 </div>
                             </motion.div>
@@ -101,7 +104,7 @@ export default function PartnersPage() {
                                 </Button>
                             </div>
                             <div className={`h-80 rounded-3xl overflow-hidden shadow-2xl relative ${idx % 2 !== 0 ? 'md:order-1' : ''}`}>
-                                <img alt={block.title} className="w-full h-full object-cover" src={block.image} />
+                                <Image alt={block.title} fill className="object-cover" src={block.image} />
                                 <div className={`absolute inset-0 ${block.color}`}></div>
                             </div>
                         </div>
@@ -142,8 +145,8 @@ export default function PartnersPage() {
                                 <div className="space-y-6">
                                     {cat.partners.map((p, pIdx) => (
                                         <div key={pIdx} className="flex items-center gap-4">
-                                            <div className="w-12 h-12 bg-gray-50 rounded-lg p-2 flex items-center justify-center">
-                                                <img src={p.logo} alt={p.name} className="max-h-full object-contain" />
+                                            <div className="w-12 h-12 bg-gray-50 rounded-lg p-2 flex items-center justify-center relative">
+                                                <Image src={p.logo} alt={p.name} fill className="object-contain p-1" />
                                             </div>
                                             <span className="font-medium text-gray-700">{p.name}</span>
                                         </div>
@@ -164,8 +167,8 @@ export default function PartnersPage() {
                                     { name: "Make", logo: PARTNER_LOGOS.make }
                                 ].map((p, idx) => (
                                     <div key={idx} className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-gray-50 rounded-lg p-2 flex items-center justify-center">
-                                            <img src={p.logo} alt={p.name} className="max-h-full object-contain" />
+                                        <div className="w-12 h-12 bg-gray-50 rounded-lg p-2 flex items-center justify-center relative">
+                                            <Image src={p.logo} alt={p.name} fill className="object-contain p-1" />
                                         </div>
                                         <span className="font-medium text-gray-700">{p.name}</span>
                                     </div>

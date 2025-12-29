@@ -3,6 +3,7 @@
 import {useState} from 'react';
 import { useParams, notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
     ArrowRight, CheckCircle2, ChevronRight, Home, Calendar
@@ -78,10 +79,11 @@ export default function ExpertiseDetailPage() {
                     <div className="relative">
                         <div className="absolute -inset-4 bg-gradient-to-r from-[#e51990] to-[#00c2ff] rounded-[2rem] opacity-30 blur-lg transform rotate-2"></div>
                         <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3] shadow-2xl border border-white/10 group">
-                            <img
+                            <Image
                                 src={data.heroImage}
                                 alt={`${data.title} Illustration`}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-[#07036e]/20 mix-blend-multiply"></div>
                         </div>
@@ -219,7 +221,7 @@ export default function ExpertiseDetailPage() {
                             </div>
                         </div>
                         <div className="h-64 md:h-auto md:w-[45%] lg:w-[40%] relative order-1 md:order-2">
-                            <img src={data.ctaImage} alt="Consultation Finance" className="w-full h-full object-cover" />
+                            <Image src={data.ctaImage} alt="Consultation Finance" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#07036e]/40 to-transparent mix-blend-multiply md:bg-gradient-to-l"></div>
                         </div>
                     </div>

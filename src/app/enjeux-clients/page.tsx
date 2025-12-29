@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { AlertCircle, Search} from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import {
@@ -31,7 +32,7 @@ export default function ClientChallengesPage() {
             <section className="relative bg-[#07036e] text-white pt-48 pb-24 px-6 overflow-hidden rounded-b-[3rem]">
                 <FloatingStars color="white" />
                 <div className="absolute inset-0 z-0 opacity-20">
-                    <img alt="Équipe financière concentrée en réunion stratégique" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" />
+                    <Image alt="Équipe financière concentrée en réunion stratégique" fill className="object-cover" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#07036e] via-[#07036e]/90 to-transparent z-0"></div>
 
@@ -84,7 +85,7 @@ export default function ClientChallengesPage() {
                             Reconnaissez-vous ces situations dans votre quotidien ? Ces frictions sont les signaux d'alarme d'une structure qui a besoin d'évoluer.
                         </p>
                         <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-video border-4 border-white">
-                            <img alt="Stress en entreprise" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd" />
+                            <Image alt="Stress en entreprise" fill className="object-cover" src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd" />
                             <div className="absolute inset-0 bg-[#07036e]/20"></div>
                         </div>
                     </div>
