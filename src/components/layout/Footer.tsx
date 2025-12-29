@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import FloatingStars from '@/components/ui/FloatingStars';

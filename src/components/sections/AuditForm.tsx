@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Send } from 'lucide-react';
 import {contactService} from "@/services/contactService";
 import {toast} from "@/hooks/use-toast";
 

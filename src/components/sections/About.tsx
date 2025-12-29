@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Award, Users, Rocket } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';

@@ -3,9 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Zap } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
-import { Button } from '@/components/ui/button';
 import { METHODOLOGY_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { CheckCircle2 } from 'lucide-react';

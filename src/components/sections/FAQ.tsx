@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { FAQ_DATA, FAQ_DOMAINS } from '@/lib/data';

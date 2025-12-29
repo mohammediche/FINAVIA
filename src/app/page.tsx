@@ -8,8 +8,6 @@ import CaseStudies from "@/components/sections/CaseStudies";
 import Results from "@/components/sections/Results";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
-import {motion} from "framer-motion";
-import React from "react";
 
 export default function Home() {
   return (

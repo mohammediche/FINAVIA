@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';

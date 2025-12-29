@@ -3,10 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import {
-    ArrowRight, CheckCircle2, Database, LayoutDashboard, Settings,
-    Zap, BarChart3, Clock, ShieldCheck, Users
-} from 'lucide-react';
+import { ArrowRight, CheckCircle2, Settings, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import FloatingStars from '@/components/ui/FloatingStars';
 import {
@@ -17,13 +14,6 @@ import {
     TECH_PARTNERS_LIST
 } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
-
-const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.6 }
-};
 
 export default function PartnersPage() {
     return (

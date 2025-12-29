@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-    ArrowRight, AlertCircle, Search, ChevronDown, ChevronRight
-} from 'lucide-react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { AlertCircle, Search} from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
-import { Button } from '@/components/ui/button';
 import {
     CHALLENGES_DATA,
     PROBLEMS_DATA,

@@ -1,9 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Linkedin, MapPin, Mail, Phone, ArrowRight, ExternalLink, Calendar } from 'lucide-react';
+import { Linkedin, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
-import { Button } from '@/components/ui/button';
 import { ABOUT_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
 

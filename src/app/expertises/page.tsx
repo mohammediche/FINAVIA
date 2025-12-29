@@ -1,13 +1,7 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import {
-    ArrowRight, Plus, Minus, CheckCircle2
-} from 'lucide-react';
+import { motion } from 'framer-motion';
 import FloatingStars from '@/components/ui/FloatingStars';
-import { Button } from '@/components/ui/button';
 import InteractiveServices from "@/components/sections/InteractiveServices";
 import StandardCTA from "@/components/sections/StandardCTA";
 

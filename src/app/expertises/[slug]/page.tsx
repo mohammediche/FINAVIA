@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from 'react';
+import {useState} from 'react';
 import { useParams, notFound } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
