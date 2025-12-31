@@ -7,9 +7,11 @@ interface SendEmailProps {
 
 export async function sendEmail({ to, subject, htmlContent, replyTo }: SendEmailProps) {
     const apiKey = process.env.BREVO_API_KEY;
+    const adminEmail = process.env.ADMIN_EMAIL;
     
 
     if (!apiKey) throw new Error("BREVO_API_KEY is missing");
+    if (!adminEmail) throw new Error("ADMIN_EMAIL is missing");
 
     const response = await fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
@@ -19,7 +21,7 @@ export async function sendEmail({ to, subject, htmlContent, replyTo }: SendEmail
             'content-type': 'application/json',
         },
         body: JSON.stringify({
-            sender: { name: "Finavia", email: "mohammediche@gmail.com" },
+            sender: { name: "Finavia", email: adminEmail },
             to,
             subject,
             htmlContent,

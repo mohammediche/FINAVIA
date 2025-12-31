@@ -17,14 +17,18 @@ export async function POST(req: Request) {
         });
 
         // 2. Send to Admin (The Info)
+        const adminEmail = process.env.ADMIN_EMAIL;
+        if (!adminEmail) throw new Error("ADMIN_EMAIL is missing");
+        
         await sendEmail({
-            to: [{ email: "mohammediche@gmail.com", name: "Admin" }],
+            to: [{ email: adminEmail, name: "Admin" }],
             subject: `🎁 Nouveau Lead PDF - ${body.company}`,
             htmlContent: ResourceAdminTemplate(body)
         });
 
         return NextResponse.json({ success: true });
-    } catch (e: any) {
-        return NextResponse.json({ success: false, message: e.message }, { status: 500 });
+    } catch (error) {
+        const message = error instanceof Error ? error.message : 'Unknown error';
+        return NextResponse.json({ success: false, message }, { status: 500 });
     }
 }
