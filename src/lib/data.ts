@@ -2,37 +2,38 @@
 import { Leaf, Scale, GraduationCap, Target, Users, Zap, Clock, ShieldCheck,
     BarChart3, Settings, PieChart, Rocket, Database,  TrendingUp, Search,
     Calculator, Briefcase, Building,LayoutDashboard } from 'lucide-react';
+import partnerImg1 from '@/../public/images/partner1.jpg'
+import partnerImg2 from '@/../public/images/partner2.png'
+import homeOptimisation from '../../public/images/homeOptimisation.png'
+import homeDigitalisation from '../../public/images/homeDigitalisation.png'
+import structurationFinancière from '../../public/images/structurationFinancière.png'
 
 
 export const PARTNERS = [
-    { name: 'Sage', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/5ae5d4805971eee08b0a799442718c7f.png' },
-    { name: 'Pennylane', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/69b204c08a820f594710ee1bbe6e01ad.png' },
-    { name: 'Spendesk', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/d55b7eaa24d1489f1e171595fd9c26be.png' },
-    { name: 'Agicap', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c73c301d18e3913447042b755ed5c82b.png' },
-    { name: 'Regate', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/58c9aa638e910165c9d9a0a31919a77d.png' },
-    { name: 'Yooz', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/ac7ac7749038c0f772af6574de3e6035.png' },
-    { name: 'Finthesis', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c5fbdaf3e80a278c8ec084ef95e45a31.png' }
+    { name: 'My report ', url:partnerImg1 },
+    { name: 'Fygr', url: partnerImg2 },
+
 ];
 
 export const METRICS = [
     {
-        value: 500,
+        value: 100,
         suffix: '+',
-        label: 'Projets Réalisés',
+        label: 'PROJETS RÉALISÉS',
         color: 'text-[#e51990]',
         details: ['Secteurs variés', 'PME & ETI', 'International']
     },
     {
         value: 98,
         suffix: '%',
-        label: 'Satisfaction Client',
+        label: 'SATISFACTION CLIENTS ',
         color: 'text-[#0b1a9c]',
         details: ['Fidélisation forte', 'Recommandation', 'Suivi long terme']
     },
     {
-        value: 250,
-        suffix: '%',
-        label: 'ROI Moyen',
+        value: 55,
+        suffix: '+',
+        label: 'OUTILS FINANCE DÉPLOYÉS',
         color: 'text-[#e51990]',
         details: ['Productivité', 'Gain de temps', 'Rentabilité']
     }
@@ -49,10 +50,10 @@ export const SERVICES = [
     {
         id: 1,
         category: 'strategy',
-        title: "Audit et Diagnostic Financier",
+        title: "Audit & Diagnostic des processus financier",
         icon: BarChart3,
         link: "/expertises/audit",
-        description: "Une analyse approfondie de votre structure financière actuelle pour identifier les risques, les inefficacités et les opportunités de croissance immédiates.",
+        description: "Une analyse approfondie de votre organisation actuelle pour évaluer la maturité de votre direction finance, identifier les risques, les leviers d’efficacité et prioriser les actions.",
         benefits: ["Cartographie des risques", "Plan d'action priorisé", "Vision claire à 360°"]
     },
     {
@@ -70,13 +71,13 @@ export const SERVICES = [
         title: "Digitalisation et Automatisation",
         icon: Zap,
         link: "/expertises/digitalisation",
-        description: "Transformation de votre écosystème financier par l'intégration d'outils modernes et l'automatisation des tâches à faible valeur ajoutée.",
-        benefits: ["Gain de productivité", "Zéro papier", "Données temps réel"]
+        description: "Transformation de votre écosystème financier par la mise en place de facturation électronique et l'intégration d'outils modernes d’automatisation des tâches à faible valeur ajoutée.",
+        benefits: ["Gain de productivité", "conformité règlementaire ", "Données temps réel"]
     },
     {
         id: 4,
         category: 'performance',
-        title: "Pilotage Financier et Performance",
+        title: "Pilotage financier et Performance",
         icon: PieChart,
         link: "/expertises/pilotage-financier",
         description: "Mise en place de tableaux de bord dynamiques et de KPIs pertinents pour piloter votre activité avec précision et anticiper l'avenir.",
@@ -85,18 +86,19 @@ export const SERVICES = [
     {
         id: 5,
         category: 'performance',
-        title: "Expertises Financières Avancées",
+        title: "Expertises Financières et opérations stratégiques",
         icon: Rocket,
         link: "/expertises/expertises-avancees",
-        description: "Accompagnement sur-mesure pour les opérations complexes : levées de fonds, fusions-acquisitions ou conformité réglementaire spécifique.",
-        benefits: ["Sérénité juridique", "Dossiers bancaires solides", "Support transactionnel"]
+        description: "Accompagnement sur mesure dans la préparation et la sécurisation de vos opérations structurantes : levées de fonds, croissance externe, refinancement ou exigences réglementaires spécifiques.\n" +
+            "Nous intervenons en amont pour fiabiliser vos données, structurer et renforcer votre crédibilité auprès de vos partenaires.",
+        benefits: ["Fiabilité et conformité ", "Crédibilité renforcée ", "Pilotage financier sécurisé "]
     }
 ];
 
 export const CASE_STUDIES = [
     {
         title: "Optimisation de la trésorerie",
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=600&h=400",
+        image: homeOptimisation,
         points: [
             "Audit complet des flux",
             "Mise en place de Agicap",
@@ -107,32 +109,32 @@ export const CASE_STUDIES = [
         title: "Refonte du Reporting",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=400",
         points: [
-            "KPIs automatisés",
-            "Tableaux de bord temps réel",
+            "Implémentation de Finthesis ",
+            "Tableaux de bord KPIs automatisés",
             "Gain de 5 jours sur la clôture"
         ]
     },
     {
         title: "Digitalisation Factures",
-        image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=600&h=400",
+        image: homeDigitalisation,
         points: [
-            "Intégration Yooz",
-            "Workflow de validation",
-            "100% zéro papier atteint"
+            "Intégration Yooz et Spendesk",
+            "Workflow de validation Factures et note de frais",
+            "Facturation électronique conforme"
         ]
     },
     {
         title: "Automatisation Paie",
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600&h=400",
         points: [
-            "Migration vers PayFit",
+            "Migration vers Silae",
             "Connexion comptable native",
             "Fiabilité des bulletins assurée"
         ]
     },
     {
         title: "Structuration Financière",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600&h=400",
+        image: structurationFinancière,
         points: [
             "Mise en place de procédures",
             "Sécurisation des paiements",

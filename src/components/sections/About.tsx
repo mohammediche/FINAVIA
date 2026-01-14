@@ -74,11 +74,10 @@ const About = () => {
             Découvrez Finavia
           </span>
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-                        Le partenaire financier <br/> de votre croissance
+                        Le partenaire de votre <br/> transformation finance
                     </h2>
                     <p className="text-white/80 text-lg leading-relaxed mb-8 font-light">
-                        Finavia n'est pas un cabinet d'expertise comptable classique. Nous sommes des architectes de la performance financière, dédiés à structurer, digitaliser et piloter votre entreprise vers le succès.
-                    </p>
+                        Finavia n’est pas qu’un cabinet de conseil classique, nous intervenons sur les process, les outils et le pilotage pour construire une finance fiable, efficace et au service de la croissance.                    </p>
 
                     {/* Feature List */}
                     <div className="space-y-4 mb-8">
@@ -86,7 +85,7 @@ const About = () => {
                             <div className="w-8 h-8 rounded-full bg-[#e51990]/20 flex items-center justify-center">
                                 <CheckCircle2 className="text-[#e51990] w-5 h-5" />
                             </div>
-                            <span className="font-medium">Une approche opérationnelle et pragmatique</span>
+                            <span className="font-medium">Une approche opérationnelle, orientée terrain</span>
                         </div>
                         <div className="flex items-center gap-3">
                             <div className="w-8 h-8 rounded-full bg-[#e51990]/20 flex items-center justify-center">
@@ -98,17 +97,17 @@ const About = () => {
                             <div className="w-8 h-8 rounded-full bg-[#e51990]/20 flex items-center justify-center">
                                 <Users className="text-[#e51990] w-5 h-5" />
                             </div>
-                            <span className="font-medium">Maîtrise totale de l'écosystème tech</span>
+                            <span className="font-medium">Une maîtrise des outils et de l’écosystème finance</span>
                         </div>
                     </div>
 
                     {/* Stats Badges */}
                     <div className="flex gap-4 mb-8">
                         <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm">
-                            <span className="font-bold text-[#e51990]">10+</span> Années d'expérience
+                            <span className="font-bold text-[#e51990]">+15</span> années d’expérience
                         </div>
                         <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm">
-                            <span className="font-bold text-[#e51990]">100%</span> Satisfaction
+                            <span className="font-bold text-[#e51990]">98%</span> Satisfaction clients
                         </div>
                     </div>
 

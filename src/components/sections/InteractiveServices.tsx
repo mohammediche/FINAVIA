@@ -1,38 +1,45 @@
 "use client";
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import Link from 'next/link';
-import { SERVICE_CATEGORIES, SERVICES } from '@/lib/data';
+import { SERVICES } from '@/lib/data';
 import { AccordionItem } from '@/components/ui/AccordionItem';
-
-interface InteractiveServicesProps {
-    showHeader?: boolean;
-    badge?: string;
-    title?: React.ReactNode;
-    description?: string;
-}
 
 const InteractiveServices = ({
                                  showHeader = false,
                                  badge = "Nos Domaines d'Intervention",
-                                 title = <>Solutions sur-mesure <br/> pour votre croissance</>,
+                                 title = <>Solutions sur-mesure pour la transformation <br/> de votre service financier</>,
                                  description = "Nous intervenons à chaque étape clé de votre développement financier, de la structuration initiale aux opérations complexes."
-                             }: InteractiveServicesProps) => {
-    const [activeCategory, setActiveCategory] = useState('all');
-    const [openServiceId, setOpenServiceId] = useState<number | null>(1);
+                             }) => {
 
-    const filteredServices = activeCategory === 'all'
-        ? SERVICES
-        : SERVICES.filter(service => service.category === activeCategory);
+    const [openServiceIds, setOpenServiceIds] = useState<number[]>([1]);
+
+    const handleOpenAll = () => {
+        const allIds = SERVICES.map(s => s.id);
+        setOpenServiceIds(allIds);
+    };
+
+    const handleCloseAll = () => {
+        setOpenServiceIds([]);
+    };
+
+    const toggleService = (id: number) => {
+        setOpenServiceIds(prev =>
+            prev.includes(id)
+                ? prev.filter(item => item !== id)
+                : [...prev, id]
+        );
+    };
 
     return (
-        <section className=" bg-white py-24 px-6 relative overflow-hidden">
+        <section className="bg-white py-24 px-6 relative overflow-hidden">
             <FloatingStars color="pink" />
+
+            {/* Restored Header Section */}
             {showHeader && (
-                <div className="text-center mb-16">
+                <div className="text-center mb-16 relative z-10">
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +48,6 @@ const InteractiveServices = ({
                     >
                         {badge}
                     </motion.span>
-
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +57,6 @@ const InteractiveServices = ({
                     >
                         {title}
                     </motion.h2>
-
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -63,59 +68,55 @@ const InteractiveServices = ({
                     </motion.p>
                 </div>
             )}
-            {/* Decorative Background Elements */}
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#07036e] rounded-full blur-[120px] opacity-5 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#e51990] rounded-full blur-[120px] opacity-5 translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                {/* Filter Buttons */}
+                {/* Toggle Controls */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="flex flex-wrap justify-center gap-3 mb-12"
+                    className="flex flex-wrap justify-center gap-4 mb-12"
                 >
-                    {SERVICE_CATEGORIES.map((cat) => (
-                        <button
-                            key={cat.id}
-                            onClick={() => { setActiveCategory(cat.id); setOpenServiceId(null); }}
-                            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${
-                                activeCategory === cat.id
-                                    ? 'bg-[#07036e] text-white border-[#07036e] shadow-lg shadow-[#07036e]/20 scale-105'
-                                    : 'bg-white text-gray-600 border-gray-200 hover:border-[#e51990] hover:text-[#e51990]'
-                            }`}
-                        >
-                            {cat.label}
-                        </button>
-                    ))}
+                    <button
+                        onClick={handleOpenAll}
+                        className="flex items-center gap-2 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 bg-[#07036e] text-white shadow-lg shadow-[#07036e]/20 hover:bg-[#07036e]/90 hover:scale-105 active:scale-95"
+                    >
+                        <ChevronDown size={18} />
+                        Tout voir
+                    </button>
+
+                    <button
+                        onClick={handleCloseAll}
+                        className="flex items-center gap-2 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 border border-gray-200 text-gray-600 bg-white hover:border-[#e51990] hover:text-[#e51990] hover:scale-105 active:scale-95"
+                    >
+                        <ChevronUp size={18} />
+                        Tout réduire
+                    </button>
                 </motion.div>
 
-                {/* Accordion Service List using the Shared Atom */}
                 <div className="space-y-4">
                     <AnimatePresence mode='wait'>
-                        {filteredServices.map((service) => (
+                        {SERVICES.map((service) => (
                             <AccordionItem
                                 key={service.id}
                                 title={service.title}
                                 icon={<service.icon size={28} />}
-                                isOpen={openServiceId === service.id}
-                                onToggle={() => setOpenServiceId(service.id)}
+                                isOpen={openServiceIds.includes(service.id)}
+                                onToggle={() => toggleService(service.id)}
                                 variant="service"
                             >
-                                {/* Internal content remains specific to Services */}
                                 <div className="grid md:grid-cols-2 gap-8">
                                     <div>
                                         <p className="text-gray-600 leading-relaxed mb-6">
                                             {service.description}
                                         </p>
                                         <Link
-                                            href={service.link  || "#"}
+                                            href={service.link || "#"}
                                             className="inline-flex items-center gap-2 text-[#e51990] font-bold hover:gap-3 transition-all group/link"
                                         >
                                             Découvrir cette expertise <ArrowRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
                                         </Link>
                                     </div>
-
                                     <div className="bg-gray-50 rounded-2xl p-6">
                                         <h4 className="text-[#07036e] font-bold mb-4 text-sm uppercase tracking-wide">Bénéfices clés</h4>
                                         <ul className="space-y-3">
