@@ -55,7 +55,7 @@ const Hero = () => {
                             className="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-[#e51990]/20 shadow-sm relative z-10"
                         >
               <span className="text-[#e51990] font-semibold text-sm">
-                Votre partenaire financier stratégique
+               Votre partenaire de transformation financière
               </span>
                         </motion.div>
 
@@ -74,7 +74,8 @@ const Hero = () => {
                         </h1>
 
                         <p className="text-lg md:text-xl text-gray-600 relative z-10 leading-[1.4]">
-                            Transformez votre gestion financière avec nos solutions sur mesure. Expertise, innovation et accompagnement personnalisé pour propulser votre entreprise vers l'excellence.
+                            Finavia accompagne les dirigeants et directions financières des PME et ETI dans la structuration de leur fonction finance.
+                            Nous mettons en place des process clairs, des outils adaptés et une automatisation pertinente pour une gestion financière fiable et alignée avec vos enjeux business.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 relative z-10">
@@ -84,19 +85,19 @@ const Hero = () => {
                                     whileTap={{ scale: 0.95 }}
                                     className="px-8 py-4 bg-[#e51990] text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg transition-all duration-300 cursor-pointer"
                                 >
-                                    Démarrer maintenant
+                                    Réservez votre appel gratuit
                                     <ArrowRight size={20} />
                                 </motion.div>
                             </Link>
 
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="px-8 py-4 bg-white text-[#07036e] rounded-full font-semibold flex items-center justify-center gap-2 border-2 border-[#07036e] hover:bg-[#07036e] hover:text-white transition-all duration-300"
-                            >
-                                <Play size={20} />
-                                Voir la démo
-                            </motion.button>
+                            {/*<motion.button*/}
+                            {/*    whileHover={{ scale: 1.05 }}*/}
+                            {/*    whileTap={{ scale: 0.95 }}*/}
+                            {/*    className="px-8 py-4 bg-white text-[#07036e] rounded-full font-semibold flex items-center justify-center gap-2 border-2 border-[#07036e] hover:bg-[#07036e] hover:text-white transition-all duration-300"*/}
+                            {/*>*/}
+                            {/*    <Play size={20} />*/}
+                            {/*    Voir la démo*/}
+                            {/*</motion.button>*/}
                         </div>
                     </motion.div>
 

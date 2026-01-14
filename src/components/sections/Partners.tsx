@@ -14,28 +14,10 @@ const Partners = () => {
 
             <div className="flex overflow-hidden relative">
                 {/* Main Marquee Container */}
-                <div className="flex animate-marquee hover:pause-animation items-center space-x-16 whitespace-nowrap">
+                <div className="flex animate-marquee hover:pause-animation items-center space-x-20 whitespace-nowrap">
                     {LOOPED_PARTNERS.map((partner, index) => (
                         <div
                             key={`${partner.name}-${index}`}
-                            className="flex-shrink-0 h-20 w-40 flex items-center justify-center transition-all duration-500 opacity-80 hover:opacity-100 hover:scale-105"
-                        >
-                            <Image
-                                src={partner.url}
-                                alt={`${partner.name} logo`}
-                                width={160}
-                                height={48}
-                                className="max-h-12 w-auto object-contain"
-                            />
-                        </div>
-                    ))}
-                </div>
-
-                {/* Duplicate for seamless loop */}
-                <div className="flex absolute top-0 left-0 animate-marquee2 hover:pause-animation items-center space-x-16 whitespace-nowrap">
-                    {LOOPED_PARTNERS.map((partner, index) => (
-                        <div
-                            key={`clone-${partner.name}-${index}`}
                             className="flex-shrink-0 h-20 w-40 flex items-center justify-center transition-all duration-500 opacity-80 hover:opacity-100 hover:scale-105"
                         >
                             <Image
