@@ -2,11 +2,26 @@
 import { Leaf, Scale, GraduationCap, Target, Users, Zap, Clock, ShieldCheck,
     BarChart3, Settings, PieChart, Rocket, Database,  TrendingUp, Search,
     Calculator, Briefcase, Building,LayoutDashboard } from 'lucide-react';
-import partnerImg1 from '@/../public/images/partner1.jpg'
-import partnerImg2 from '@/../public/images/partner2.png'
-import homeOptimisation from '../../public/images/homeOptimisation.png'
-import homeDigitalisation from '../../public/images/homeDigitalisation.png'
-import structurationFinancière from '../../public/images/structurationFinancière.png'
+import partnerImg1 from '@/../public/images/homePage/partner1.jpg'
+import partnerImg2 from '@/../public/images/homePage/partner2.png'
+import homeOptimisation from '../../public/images/homePage/homeOptimisation.png'
+import homeDigitalisation from '../../public/images/homePage/homeDigitalisation.png'
+import structurationFinanciere from '../../public/images/homePage/structurationFinancière.png'
+import diagnosticImg from '@/../public/images/methodePage/Diagnostic.png'
+import propositionImg from '@/../public/images/methodePage/propositionCadrage.jpg'
+import formationImg from '@/../public/images/methodePage/formationAccompagnement.jpg'
+import auditHeroImg from '@/../public/images/expertisePage/auditHero.png'
+import structurationHeroImg from '@/../public/images/expertisePage/structurationHero.png'
+import digitalisationHeroImg from '@/../public/images/expertisePage/digitalisationHero.png'
+import pilotageHeroImg from '../../public/images/expertisePage/pilotageHero.jpg'
+import expertisesHeroImg from '@/../public/images/expertisePage/expertisesHero.png'
+import integrationImg from '@/../public/images/partenairesPage/integration.webp'
+import reportingImg from '@/../public/images/partenairesPage/reporting.png'
+import analytiqueImg from '@/../public/images/partenairesPage/analytique.webp'
+import accompagnementImg from '../../public/images/partenairesPage/accompagnement.png'
+
+
+
 
 
 export const PARTNERS = [
@@ -134,7 +149,7 @@ export const CASE_STUDIES = [
     },
     {
         title: "Structuration Financière",
-        image: structurationFinancière,
+        image: structurationFinanciere,
         points: [
             "Mise en place de procédures",
             "Sécurisation des paiements",
@@ -299,7 +314,7 @@ export const METHODOLOGY_PAGE_DATA = {
             subtitle: "État des lieux & Audit",
             description: "Nous réalisons une analyse 360° de votre existant : processus comptables, outils, compétences équipes et fiabilité des données. L'objectif est d'identifier les goulets d'étranglement et les zones de risques immédiats.",
             benefits: ["Cartographie des flux", "Matrice des risques", "Benchmark sectoriel"],
-            imgSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+            imgSrc: diagnosticImg
         },
         {
             id: 2,
@@ -307,7 +322,7 @@ export const METHODOLOGY_PAGE_DATA = {
             subtitle: "Feuille de route stratégique",
             description: "Nous co-construisons le plan d'action. Pas de catalogue standard, mais une réponse précise à vos enjeux : choix des outils (ERP, reporting), définition du calendrier et allocation des ressources nécessaires.",
             benefits: ["Planning détaillé", "Budget validé", "KPIs de succès définis"],
-            imgSrc: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            imgSrc: propositionImg
         },
         {
             id: 3,
@@ -323,7 +338,7 @@ export const METHODOLOGY_PAGE_DATA = {
             subtitle: "Conduite du changement",
             description: "Le meilleur outil ne sert à rien s'il n'est pas utilisé. Nous formons vos collaborateurs pour garantir une adoption rapide et durable des nouvelles méthodes de travail.",
             benefits: ["Ateliers pratiques", "Support utilisateurs", "Coaching managers"],
-            imgSrc: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            imgSrc: formationImg
         },
         {
             id: 5,
@@ -355,7 +370,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
     'audit': {
         title: "Audit",
         icon: BarChart3,
-        heroImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop",
+        heroImage: auditHeroImg,
         ctaImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto-format&fit=crop",
         description: "Analyse complète de la situation financière et organisationnelle de l'entreprise afin d'identifier les forces, les faiblesses et les axes prioritaires d'amélioration.",
         objectives: [
@@ -379,7 +394,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
     'structuration-finance': {
         title: "Structuration de la Fonction Finance",
         icon: Settings,
-        heroImage: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000&auto=format&fit=crop",
+        heroImage: structurationHeroImg,
         ctaImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000&auto-format&fit=crop",
         description: "Structuration, organisation et montée en maturité de la fonction finance pour garantir fiabilité, rapidité et efficacité des opérations.",
         objectives: [
@@ -403,7 +418,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
     'digitalisation': {
         title: "Digitalisation et Automatisation",
         icon: Zap,
-        heroImage: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        heroImage: digitalisationHeroImg,
         ctaImage: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1000&auto-format&fit=crop",
         description: "Optimisation technologique des outils financiers, automatisation des tâches et mise en conformité avec les futures obligations de dématérialisation.",
         objectives: [
@@ -427,7 +442,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
     'pilotage-financier': {
         title: "Pilotage Financier et Performance",
         icon: PieChart,
-        heroImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        heroImage: pilotageHeroImg,
         ctaImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto-format&fit=crop",
         description: "Mise en place d'outils et de méthodes de pilotage permettant une vision claire, prédictive et orientée décision.",
         objectives: [
@@ -451,7 +466,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
     'expertises-avancees': {
         title: "Expertises Financières Avancées",
         icon: Rocket,
-        heroImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop",
+        heroImage: expertisesHeroImg,
         ctaImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Accompagnement spécialisé sur les enjeux financiers complexes, stratégiques ou à forte valeur ajoutée.",
         objectives: [
@@ -622,7 +637,7 @@ export const INTEGRATION_BLOCKS = [
         id: "01",
         tag: "Intégration",
         title: "Intégration des outils comptables et financiers",
-        image: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/pexels-kindelmedia-7688365-ZszkK.jpg",
+        image: integrationImg,
         color: "bg-[#07036e]/10",
         actions: "Setup complet (Spendesk, Regate, Agicap), connexion bancaire sécurisée, préparation facturation électronique 2026.",
         benefits: "Gain de temps administratif, workflows de validation sécurisés, conformité totale."
@@ -631,7 +646,7 @@ export const INTEGRATION_BLOCKS = [
         id: "02",
         tag: "Reporting",
         title: "Structuration des process et reporting digitalisé",
-        image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: reportingImg,
         color: "bg-[#e51990]/10",
         actions: "Optimisation du processus de clôture, création de reporting Power BI, alignement Comptabilité/Gestion.",
         benefits: "Données fiables en temps réel, pilotage clair de la performance, prise de décision rapide."
@@ -640,7 +655,7 @@ export const INTEGRATION_BLOCKS = [
         id: "03",
         tag: "Analytique",
         title: "Mise en place de la comptabilité analytique",
-        image: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/pexels-rdne-7948036-jbeFY.jpg",
+        image: analytiqueImg,
         color: "bg-[#07036e]/10",
         actions: "Structuration des axes analytiques, reporting par coûts/activités, rétroplanning comptable.",
         benefits: "Meilleure visibilité sur la rentabilité par pôle, allocation des ressources optimisée."
@@ -649,7 +664,7 @@ export const INTEGRATION_BLOCKS = [
         id: "04",
         tag: "Accompagnement",
         title: "Accompagnement à la transformation digitale",
-        image: "https://images.unsplash.com/photo-1680781336852-af0416157119?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: accompagnementImg,
         color: "bg-[#e51990]/10",
         actions: "Sélection des outils adaptés, mise en conformité, formation des équipes pour l'adoption.",
         benefits: "ROI rapide, autonomie des équipes, modernisation de l'image employeur."
