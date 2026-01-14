@@ -12,10 +12,10 @@ const Partners = () => {
                 <p className="text-gray-500 font-medium text-sm uppercase tracking-wider">Ils nous font confiance</p>
             </div>
 
-            <div className="flex overflow-hidden relative">
+            <div className="flex overflow-hidden relative justify-center">
                 {/* Main Marquee Container */}
-                <div className="flex animate-marquee hover:pause-animation items-center space-x-20 whitespace-nowrap">
-                    {LOOPED_PARTNERS.map((partner, index) => (
+                <div className="flex  items-center space-x-20 whitespace-nowrap">
+                    {PARTNERS.map((partner, index) => (
                         <div
                             key={`${partner.name}-${index}`}
                             className="flex-shrink-0 h-20 w-40 flex items-center justify-center transition-all duration-500 opacity-80 hover:opacity-100 hover:scale-105"

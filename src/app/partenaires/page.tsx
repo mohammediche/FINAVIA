@@ -15,6 +15,7 @@ import {
     TECH_PARTNERS_LIST
 } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
+import partenairesHeroImg from '@/../public/images/partenairesPage/partenairesHero.jpeg'
 
 export default function PartnersPage() {
     return (
@@ -45,7 +46,7 @@ export default function PartnersPage() {
 
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative hidden lg:block">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500 aspect-[4/3]">
-                            <Image src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Dashboard" fill className="object-cover" />
+                            <Image src={partenairesHeroImg} alt="Dashboard" fill className="object-cover" />
                             <div className="absolute inset-0 bg-[#07036e]/20"></div>
                         </div>
                     </motion.div>

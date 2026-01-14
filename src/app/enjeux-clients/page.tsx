@@ -14,6 +14,7 @@ import {
 } from '@/lib/data';
 import {AccordionItem} from "@/components/ui/AccordionItem";
 import StandardCTA from "@/components/sections/StandardCTA";
+import symptomesImg from '../../../public/images/enjeuxClientsPage/symptomesFinance.jpg'
 
 export default function ClientChallengesPage() {
     const [activeSector, setActiveSector] = useState('Direction Financière / DAF');
@@ -85,7 +86,7 @@ export default function ClientChallengesPage() {
                             Reconnaissez-vous ces situations dans votre quotidien ? Ces frictions sont les signaux d'alarme d'une structure qui a besoin d'évoluer.
                         </p>
                         <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-video border-4 border-white">
-                            <Image alt="Stress en entreprise" fill className="object-cover" src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd" />
+                            <Image alt="Stress en entreprise" fill className="object-cover" src={symptomesImg} />
                             <div className="absolute inset-0 bg-[#07036e]/20"></div>
                         </div>
                     </div>

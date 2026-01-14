@@ -8,6 +8,7 @@ import { CheckCircle2 } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { METHODOLOGY_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
+import methodeHero from '@/../public/images/methodePage/methodeHero.png'
 
 export default function MethodPage() {
     return (
@@ -40,7 +41,7 @@ export default function MethodPage() {
                         <div className="absolute inset-0 bg-[#e51990] rounded-[2rem] transform rotate-3 blur-lg opacity-30"></div>
                         <div className="relative rounded-[2rem] shadow-2xl border-4 border-white/10 w-full h-[450px] overflow-hidden">
                             <Image
-                                src="https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/4341c9f82ada204c555e63399ddc6dbe.jpg"
+                                src={methodeHero}
                                 alt="Méthodologie Finavia"
                                 fill
                                 className="object-cover"
