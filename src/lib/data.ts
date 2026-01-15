@@ -1,7 +1,8 @@
 
 import { Leaf, Scale, GraduationCap, Target, Users, Zap, Clock, ShieldCheck,
-    BarChart3, Settings, PieChart, Rocket, Database,  TrendingUp, Search,
-    Calculator, Briefcase, Building,LayoutDashboard } from 'lucide-react';
+    BarChart3, Settings, PieChart, Rocket,  TrendingUp, Search,
+    Calculator, Briefcase, Building,LayoutDashboard,Database,
+    Cpu } from 'lucide-react';
 import partnerImg1 from '@/../public/images/homePage/partner1.jpg'
 import partnerImg2 from '@/../public/images/homePage/partner2.png'
 import homeOptimisation from '../../public/images/homePage/homeOptimisation.png'
@@ -593,42 +594,70 @@ export const CONTACT_SERVICES = [
 ];
 
 export const PARTNER_LOGOS = {
+    // Existing (Verified)
     pennylane: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/69b204c08a820f594710ee1bbe6e01ad.png",
     spendesk: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/d55b7eaa24d1489f1e171595fd9c26be.png",
     agicap: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c73c301d18e3913447042b755ed5c82b.png",
     regate: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/58c9aa638e910165c9d9a0a31919a77d.png",
-    notion: "https://images.unsplash.com/photo-1658383178431-42985646a636",
-    google: "https://images.unsplash.com/photo-1649180549324-3e03951391aa",
-    powerbi: "https://images.unsplash.com/photo-1675022991860-ad46e3e9c150",
-    hubspot: "https://images.unsplash.com/photo-1668440621025-d1f36e9eb7b4",
-    zapier: "https://images.unsplash.com/photo-1664098295863-62a394edad97",
-    make: "https://images.unsplash.com/photo-1658204212985-e0126040f88f"
+
+
+    fygr: "https://img.logo.dev/fygr.io?token=pk_ST8p_v9mS_m8M_Gv_Cq_vQ",
+    sage: "https://upload.wikimedia.org/wikipedia/commons/4/42/Sage-logo_svg.svg",
+    finthesis: "https://www.finthesis.io/favicon.ico",
+    myreport: "https://www.myreport.fr/favicon.ico",
+    yooz: "https://www.getyooz.com/hubfs/yooz-logo-2022.png",
+    copilot: "https://cdn.jsdelivr.net/gh/logohub/logos@main/openai/copilot.svg",
+    openai: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/512px-OpenAI_Logo.svg.png",
 };
 
 export const TRANSFORMATION_OBJECTIVES = [
     {
         icon: Rocket,
         title: "Créer une direction financière performante",
-        desc: "Déployez les fondamentaux d'une finance moderne et agile.",
-        logos: [PARTNER_LOGOS.spendesk, PARTNER_LOGOS.regate, PARTNER_LOGOS.pennylane, PARTNER_LOGOS.agicap, PARTNER_LOGOS.notion]
+        desc: "Déployez les fondamentaux d'une finance moderne et agile avec les meilleurs outils du marché.",
+        logos: [
+            PARTNER_LOGOS.pennylane,
+            PARTNER_LOGOS.sage,
+            PARTNER_LOGOS.agicap,
+            PARTNER_LOGOS.spendesk,
+            PARTNER_LOGOS.copilot
+        ]
     },
     {
         icon: LayoutDashboard,
         title: "Structurer la direction financière",
-        desc: "Organisez vos flux d'information et centralisez la donnée.",
-        logos: [PARTNER_LOGOS.pennylane, PARTNER_LOGOS.regate, PARTNER_LOGOS.google, PARTNER_LOGOS.powerbi]
+        desc: "Organisez vos flux d'information et centralisez la donnée pour une vision 360°.",
+        logos: [
+            PARTNER_LOGOS.pennylane,
+            PARTNER_LOGOS.regate,
+            PARTNER_LOGOS.fygr,
+            PARTNER_LOGOS.myreport,
+            PARTNER_LOGOS.finthesis
+        ]
     },
     {
         icon: Zap,
         title: "Digitaliser les workflows et automatiser",
-        desc: "Éliminez les tâches manuelles répétitives à faible valeur ajoutée.",
-        logos: [PARTNER_LOGOS.spendesk, PARTNER_LOGOS.regate, PARTNER_LOGOS.agicap, PARTNER_LOGOS.hubspot, PARTNER_LOGOS.zapier, PARTNER_LOGOS.make]
+        desc: "Éliminez les tâches manuelles répétitives grâce à l'IA et l'automatisation des flux.",
+        logos: [
+            PARTNER_LOGOS.yooz,
+            PARTNER_LOGOS.spendesk,
+            PARTNER_LOGOS.copilot,
+            PARTNER_LOGOS.openai,
+            PARTNER_LOGOS.regate
+        ]
     },
     {
         icon: Database,
-        title: "Fiabiliser la comptabilité analytique et le pilotage",
-        desc: "Gagnez en visibilité avec des reportings fiables et temps réel.",
-        logos: [PARTNER_LOGOS.powerbi, PARTNER_LOGOS.agicap, PARTNER_LOGOS.pennylane]
+        title: "Fiabiliser le pilotage et le reporting",
+        desc: "Gagnez en visibilité avec des reportings fiables, précis et disponibles en temps réel.",
+        logos: [
+            PARTNER_LOGOS.finthesis,
+            PARTNER_LOGOS.myreport,
+            PARTNER_LOGOS.agicap,
+            PARTNER_LOGOS.fygr,
+            PARTNER_LOGOS.sage
+        ]
     }
 ];
 
@@ -644,70 +673,82 @@ export const INTEGRATION_STEPS = [
 export const INTEGRATION_BLOCKS = [
     {
         id: "01",
-        tag: "Intégration",
-        title: "Intégration des outils comptables et financiers",
+        tag: "SÉLECTION DE LA SOLUTION",
+        title: "Identifier l'outil adapté à vos besoins spécifiques ",
         image: integrationImg,
         color: "bg-[#07036e]/10",
-        actions: "Setup complet (Spendesk, Regate, Agicap), connexion bancaire sécurisée, préparation facturation électronique 2026.",
-        benefits: "Gain de temps administratif, workflows de validation sécurisés, conformité totale."
+        actions: "Analyser les besoins métiers, établir un cahier des charges, comparer les solutions du marché et négocier les conditions contractuelles.",
+        benefits: "Garantir un investissement aligné avec les priorités de l'entreprise et minimiser les risques d'inadéquation fonctionnelle."
     },
     {
         id: "02",
-        tag: "Reporting",
-        title: "Structuration des process et reporting digitalisé",
+        tag: "PARAMÉTRAGE",
+        title: "Configurer l'outil selon les processus et les référentiels financiers",
         image: reportingImg,
         color: "bg-[#e51990]/10",
-        actions: "Optimisation du processus de clôture, création de reporting Power BI, alignement Comptabilité/Gestion.",
-        benefits: "Données fiables en temps réel, pilotage clair de la performance, prise de décision rapide."
+        actions: "Définir les plans comptables, créer les workflows de validation,  établir les connexions avec les systèmes existants.",
+        benefits: "Assurer la cohérence des données financières et l’adaptation de l'outil aux spécificités métiers de l'organisation."
     },
     {
         id: "03",
-        tag: "Analytique",
-        title: "Mise en place de la comptabilité analytique",
+        tag: "DÉPLOIEMENT",
+        title: "Accompagner la transition et la mise en production de la nouvelle solution",
         image: analytiqueImg,
         color: "bg-[#07036e]/10",
-        actions: "Structuration des axes analytiques, reporting par coûts/activités, rétroplanning comptable.",
-        benefits: "Meilleure visibilité sur la rentabilité par pôle, allocation des ressources optimisée."
+        actions: "Migrer les données historiques, mettre en place le support utilisateurs et valider le bon fonctionnement opérationnel.",
+        benefits: "Garantir la continuité opérationnelle et sécuriser l'intégrité des données."
     },
     {
         id: "04",
-        tag: "Accompagnement",
-        title: "Accompagnement à la transformation digitale",
+        tag: "FORMATION",
+        title: "Développer les compétences des utilisateurs ",
         image: accompagnementImg,
         color: "bg-[#e51990]/10",
-        actions: "Sélection des outils adaptés, mise en conformité, formation des équipes pour l'adoption.",
-        benefits: "ROI rapide, autonomie des équipes, modernisation de l'image employeur."
+        actions: "Animer des parcours de formation adaptés aux profils et évaluer la montée en compétence.",
+        benefits: "Maximiser l'adoption de l'outil grâce à des supports de référence et réduire la dépendance aux supports externes."
     }
 ];
 
 export const TECH_PARTNERS_LIST = [
     {
-        category: "Outils Comptables",
+        category: "Outils de Trésorerie",
+        icon: BarChart3,
+        partners: [
+            { name: "AGICAP", logo: PARTNER_LOGOS.agicap },
+            { name: "FYGR", logo: PARTNER_LOGOS.fygr }
+        ]
+    },
+    {
+        category: "Outils de Comptabilité",
         icon: Database,
         partners: [
             { name: "Pennylane", logo: PARTNER_LOGOS.pennylane },
+            { name: "SAGE", logo: PARTNER_LOGOS.sage }
+        ]
+    },
+    {
+        category: "Outils de Reporting & BI",
+        icon: LayoutDashboard,
+        partners: [
+            { name: "Finthesis", logo: PARTNER_LOGOS.finthesis },
+            { name: "My Report", logo: PARTNER_LOGOS.myreport }
+        ]
+    },
+    {
+        category: "Dépenses & Pré-comptabilité",
+        icon: ShieldCheck,
+        partners: [
+            { name: "Yooz", logo: PARTNER_LOGOS.yooz },
+            { name: "Spendesk", logo: PARTNER_LOGOS.spendesk },
             { name: "Regate", logo: PARTNER_LOGOS.regate }
         ]
     },
     {
-        category: "Outils Dépenses",
-        icon: ShieldCheck,
+        category: "Automation & IA",
+        icon: Cpu,
         partners: [
-            { name: "Spendesk", logo: PARTNER_LOGOS.spendesk }
-        ]
-    },
-    {
-        category: "Outils Cashflow",
-        icon: BarChart3,
-        partners: [
-            { name: "Agicap", logo: PARTNER_LOGOS.agicap }
-        ]
-    },
-    {
-        category: "Outils BI",
-        icon: LayoutDashboard,
-        partners: [
-            { name: "Power BI", logo: PARTNER_LOGOS.powerbi }
+            { name: "Microsoft Copilot", logo: PARTNER_LOGOS.copilot },
+            { name: "Open AI", logo: PARTNER_LOGOS.openai }
         ]
     }
 ];
