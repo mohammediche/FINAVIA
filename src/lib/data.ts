@@ -354,11 +354,11 @@ export const METHODOLOGY_PAGE_DATA = {
         }
     ],
     advantages: [
-        { icon: Target, title: "Vision claire", desc: "Des tableaux de bord lisibles pour décider vite." },
-        { icon: Users, title: "Accompagnement sur mesure", desc: "Une approche adaptée à votre culture d'entreprise." },
-        { icon: ShieldCheck, title: "Désamorçage des résistances", desc: "Pédagogie et communication pour fédérer les équipes." },
-        { icon: Clock, title: "Gain de temps", desc: "Automatisation des tâches chronophages." },
-        { icon: Zap, title: "Productivité", desc: "Des processus fluides et sans erreurs." }
+        { icon: Target, title: "Processus clairs", desc: "Un plan d'action structuré, adapté à vos enjeux et priorités." },
+        { icon: Users, title: "Solutions clés en main", desc: "Des méthodes et outils éprouvés, immédiatement opérationnels." },
+        { icon: ShieldCheck, title: "Exécution opérationnelle", desc: "Nous prenons en charge la réalisation concrète : process, documentation, pilotage." },
+        { icon: Clock, title: "Co-construction", desc: "Nous travaillons main dans la main avec vos équipes métiers et projets." },
+        { icon: Zap, title: "Déploiement terrain", desc: "Nous garantissons l'adoption par un accompagnement au changement ciblé." }
     ],
     poles: [
         { title: "Audit", icon: BarChart3, path: "/expertises/audit" },
