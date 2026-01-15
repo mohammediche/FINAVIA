@@ -40,9 +40,9 @@ export default function AboutPage() {
                         <div className="space-y-8">
                             <h2 className="text-4xl font-bold text-[#07036e]">Notre Mission</h2>
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                Chez FINAVIA, notre mission est claire : <span className="font-bold text-[#07036e]">démocratiser l'accès à une direction financière de haut niveau</span> pour les PME et ETI.
+                                Chez FINAVIA, notre mission est claire : <span className="font-bold text-[#07036e]">accompagner les entreprises à bâtir une direction finance moderne</span> efficace et alignée sur leurs ambitions.
                                 <br /><br />
-                                Nous croyons fermement que la structuration financière et la digitalisation ne sont pas des fins en soi, mais des leviers puissants pour sécuriser votre développement et accélérer votre prise de décision.
+                                Du diagnostic à l'implémentation d'outils digitaux, nous pilotons l’évolution des dispositifs finance pour automatiser, sécuriser et fiabiliser leur gestion financière.
                             </p>
 
                             <div className="bg-blue-50 rounded-2xl p-8 border-l-4 border-[#e51990]">

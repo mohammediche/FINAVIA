@@ -252,14 +252,14 @@ export const ABOUT_PAGE_DATA = {
         {
             name: "Virginie Audrain",
             role: "Co-fondatrice & Associée",
-            desc: "Plus de 20 ans d'expérience en Direction Financière et transformation digitale. Experte en structuration de processus et management de transition. Passionnée par l'innovation financière et l'accompagnement des dirigeants.",
+            desc: "Plus de 15 ans d'expérience en Direction comptable et transformation digitale des fonctions finance. Experte en structuration de processus comptable, déploiement d'outils finance et management d'équipes dans des environnements en forte croissance. Passionnée par l'optimisation opérationnelle des Direction finance dans la modernisation.",
             image: "https://images.unsplash.com/photo-1716703741458-417a8d58f20e?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             linkedin: "#"
         },
         {
             name: "Nadia Souissi",
             role: "Co-fondatrice & Associée",
-            desc: "Expert-comptable de formation avec 20 ans d'expertise en audit et conseil. Spécialiste de la mise en conformité et de l'optimisation des flux financiers. Elle apporte une rigueur technique alliée à une vision stratégique long-terme.",
+            desc: "Plus de 15 ans d'expérience en comptabilité générale et transformation digitale des services financiers. Experte en structuration de processus, dématérialisation et optimisation des systèmes comptables. Passionnée par l'automatisation intelligente et l'accompagnement des équipes vers plus d'efficacité opérationnelle.",
             image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             linkedin: "#"
         }
@@ -288,22 +288,22 @@ export const ABOUT_PAGE_DATA = {
     ],
     commitments: [
         {
-            title: "Écologie",
-            text: "Promotion du \"Zéro Papier\" via la digitalisation totale des processus administratifs et financiers chez tous nos clients.",
+            title: "Accessibilité & Handicap",
+            text: "Nous veillons à rendre nos solutions et recommandations accessibles à tous, en favorisant l'inclusion des personnes en situation de handicap dans les organisations que nous accompagnons.",
             icon: Leaf,
             bgClass: "bg-green-100",
             iconClass: "text-[#2d5a27]"
         },
         {
-            title: "Égalité",
-            text: "Entreprise fondée et dirigée par des femmes, nous militons activement pour la parité dans les métiers du chiffre.",
+            title: "Égalité & Diversité",
+            text: "Nous promouvons un environnement inclusif et garantissons l'égalité des chances, en intégrant systématiquement les principes de diversité dans nos interventions et dans les processus RH de nos clients.",
             icon: Scale,
             bgClass: "bg-pink-100",
             iconClass: "text-[#e51990]"
         },
         {
-            title: "Transmission",
-            text: "Nous consacrons 5% de notre temps au mentorat d'étudiants et de jeunes entrepreneurs issus de milieux modestes.",
+            title: "Responsabilité Environnementale",
+            text: "Nous réduisons l'impact carbone par la dématérialisation des processus financiers et accompagnons nos clients vers des pratiques durables intégrant des critères ESG et des indicateurs de performance responsable.",
             icon: GraduationCap,
             bgClass: "bg-blue-100",
             iconClass: "text-[#07036e]"
@@ -601,12 +601,12 @@ export const PARTNER_LOGOS = {
     regate: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/58c9aa638e910165c9d9a0a31919a77d.png",
 
 
-    fygr: "https://img.logo.dev/fygr.io?token=pk_ST8p_v9mS_m8M_Gv_Cq_vQ",
-    sage: "https://upload.wikimedia.org/wikipedia/commons/4/42/Sage-logo_svg.svg",
+    fygr: "https://cdn.prod.website-files.com/61b07ae5cfb75630fbc03d22/6379f6e396fd6b5dd3837b82_Logo_Fygr.svg",
+    sage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAgCAMAAABw3UvaAAAAaVBMVEX///8A1TEA1jcA1CkA1CMA0xr2/vi58MLz/fYA0QBo4n6k7LD7//2r7bY521l55ItB3F6Z6qaN55sx2lOI55jY995I3WTJ9NHl+ukm2Uyz771R3mt044bS9tjF880a2ERa4HLt/PCA5ZHZ7UzHAAACJUlEQVQ4jZVV25arMAgNgVg1Veu1Wm+p//+Rh1y068zMWjPhpUHYSDYbK4QQN7PLsnmLSEtKAjZUOhLYMmqpSpKqiMK9CGb/K/EeA5wlpu7QAd1igFK2/tATNnHA3R/uKouiZ5D09KfxGYMTmkn5erf0P5aS5OfgBJLa1yfwnIGwPUeTHhJRLmNwVxssw5VmBRKpCsrJFSAiUOkKbwrZBQjqqBRYl3afvA0MDbEcJXa6Y1E82OuVpEFro7w6OlZJrusSwRK6cZtjByhVzX0q6ardJ0n8vARy5Z4cTWwZ7K3bIGqxZZljs+Jqb2GAVtfFqGDgTMj9BWqbWgEGLnYOcqq/eQ5Y8FRloKGVKAo8CR8JFjFZUd6PfFls2qWclaAT/mrWDKhEI21hJAqM18ots9zhwN50FT3Efr0xB3q/EJqr6iEegIm4L4atS61yfKvcV2HTtw9wZFL74KnNclJ/5l2QbO16jKyDVKxKwnoBxcwPaztQnTFLb5J+gbZd9U45mDeG3DjEwsG5MrkFjiIFDmK1hpdo7uDRHBPncl9J6z4doDoXXJR1spGb44EmxmqDpteJZOXYz4y/+mtQPLCz7JqjwoPZ8/z2FRE3PAcGq0nh1J3S/cW2mTfo8XveT1CWXMy2pqUJpwKhiwBqOt+TWuX83ZwmnL0vuf/JeI+CHrXdjghjdRornM3tY4SNJAHzpY3+fxDj5P+RKBLHdlvKydTpt+f/ANKxGsLyet1sAAAAAElFTkSuQmCC",
     finthesis: "https://www.finthesis.io/favicon.ico",
     myreport: "https://www.myreport.fr/favicon.ico",
-    yooz: "https://www.getyooz.com/hubfs/yooz-logo-2022.png",
-    copilot: "https://cdn.jsdelivr.net/gh/logohub/logos@main/openai/copilot.svg",
+    yooz: "https://www.getyooz.com/wp-content/uploads/logo-yooz-workmark-1.svg",
+    copilot: "data:image/png;base64,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",
     openai: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/512px-OpenAI_Logo.svg.png",
 };
 
