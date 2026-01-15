@@ -7,7 +7,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {NAVIGATION_LINKS} from "@/lib/data"
-
+import blackLogo from '@/../public/images/homePage/logoBlack.png'
+import whiteLogo from '@/../public/images/homePage/logoWhite.png'
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,9 @@ const Navbar = () => {
 
     // Handle scroll effect
     useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 20);
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -34,13 +37,16 @@ const Navbar = () => {
             }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-                <Link href="/" className="z-20 relative hover:scale-105 transition-transform">
+                <Link href="/" className="z-2000 relative hover:scale-105 transition-transform">
                     <Image
-                        src="https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/788cf667ff8f4806d758fad87bfa3984.png"
+                        src={isScrolled
+                            ? blackLogo
+                            : whiteLogo
+                        }
                         alt="FINAVIA Logo"
                         width={140}
                         height={70}
-                        className="h-28 w-auto object-contain"
+                        className="h-28 w-auto object-contain transition-opacity duration-300"
                         priority
                     />
                 </Link>
