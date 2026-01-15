@@ -157,25 +157,24 @@ export default function PartnersPage() {
                         ))}
 
                         {/* Outils Automation & IA - Special Wide Card */}
-                        <div className="border border-gray-100 rounded-3xl p-8 hover:shadow-lg transition-all bg-white lg:col-span-2">
-                            <h3 className="font-bold text-[#07036e] mb-6 flex items-center gap-2">
-                                <Zap size={20} className="text-[#e51990]" /> Outils Automation & IA
-                            </h3>
-                            <div className="grid md:grid-cols-3 gap-6">
-                                {[
-                                    { name: "Zapier", logo: PARTNER_LOGOS.zapier },
-                                    { name: "Notion AI", logo: PARTNER_LOGOS.notion },
-                                    { name: "Make", logo: PARTNER_LOGOS.make }
-                                ].map((p, idx) => (
-                                    <div key={idx} className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-gray-50 rounded-lg p-2 flex items-center justify-center relative">
-                                            <Image src={p.logo} alt={p.name} fill className="object-contain p-1" />
-                                        </div>
-                                        <span className="font-medium text-gray-700">{p.name}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                        {/*<div className="border border-gray-100 rounded-3xl p-8 hover:shadow-lg transition-all bg-white lg:col-span-2">*/}
+                        {/*    <h3 className="font-bold text-[#07036e] mb-6 flex items-center gap-2">*/}
+                        {/*        <Zap size={20} className="text-[#e51990]" /> Automation & IA*/}
+                        {/*    </h3>*/}
+                        {/*    <div className="grid md:grid-cols-3 gap-6">*/}
+                        {/*        {[*/}
+                        {/*            { name: "Microsoft Copilot", logo: PARTNER_LOGOS.copilot },*/}
+                        {/*           { name: "Open AI", logo: PARTNER_LOGOS.openai }*/}
+                        {/*        ].map((p, idx) => (*/}
+                        {/*            <div key={idx} className="flex items-center gap-4">*/}
+                        {/*                <div className="w-12 h-12 bg-gray-50 rounded-lg p-2 flex items-center justify-center relative">*/}
+                        {/*                    <Image src={p.logo} alt={p.name} fill className="object-contain p-1" />*/}
+                        {/*                </div>*/}
+                        {/*                <span className="font-medium text-gray-700">{p.name}</span>*/}
+                        {/*            </div>*/}
+                        {/*        ))}*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </section>

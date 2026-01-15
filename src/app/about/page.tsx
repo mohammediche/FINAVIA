@@ -127,8 +127,8 @@ export default function AboutPage() {
                         className="object-cover"
                         src="https://images.unsplash.com/photo-1591997520347-4e4615c4235e"
                     />
-                    <div className="absolute inset-0 bg-green-950/80 mix-blend-multiply"></div>
-                    <div className="absolute inset-0 bg-black/40"></div>
+                    <div className="absolute inset-0 bg-green-900/40 mix-blend-multiply"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto relative z-10 text-center text-white">
