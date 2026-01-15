@@ -380,19 +380,20 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         objectives: [
             "Évaluation globale des processus financiers",
             "Analyse des risques et des contrôles internes",
-            "Recommandations prioritaires et plan d'action"
+            "Recommandations prioritaires et plan d'action",
+            "État des lieux détaillés des points de friction"
         ],
         deliverables: [
             "Rapport d'audit détaillé",
-            "Cartographie des risques",
+            "Cartographie des flux, outils et risques ",
             "Plan d'action opérationnel",
-            "Restitution à la direction"
+            "Analyse de la maturité"
         ],
         benefits: [
-            "Visibilité accrue sur la santé financière",
-            "Sécurisation des actifs de l'entreprise",
-            "Identification des leviers de performance",
-            "Aide à la prise de décision stratégique"
+            "FEUILLE DE ROUTE CLAIRE",
+            "SECURISATION DES ACTIFS DE L’ENTREPRISE",
+            "AIDE A LA PRISE DE DECISION STRATÉGIQUE",
+            "IDENTIFICATION DES LEVIERS DE PERFORMANCE"
         ]
     },
     'structuration-finance': {
@@ -400,17 +401,18 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         icon: Settings,
         heroImage: structurationHeroImg,
         ctaImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000&auto-format&fit=crop",
-        description: "Structuration, organisation et montée en maturité de la fonction finance pour garantir fiabilité, rapidité et efficacité des opérations.",
+        description: "Structuration, organisation et montée en maturité de la direction finance pour garantir fiabilité, rapidité et efficacité des opérations.",
         objectives: [
-            "Internalisation de la fonction finance",
-            "Process et organisation",
-            "Clôture mensuelle ou trimestrielle"
+            "Cartographie et optimisation des processus",
+            "Documentation et création de référentiels opérationnels",
+            "Renforcement des dispositifs de contrôle interne",
+            "Accompagnement au changement et transfert de compétences"
         ],
         deliverables: [
-            "Organigramme cible et fiches de poste",
-            "Manuel de procédures administratives",
-            "Calendrier de clôture optimisé",
-            "Matrice des responsabilités"
+            "Déploiement d’un calendrier de clôture (mensuel ou trimestriel) ",
+            "Rapprochement entre la compta et les reportings de gestion",
+            "Mise en place de process métier",
+            "(Re)définition des rôles "
         ],
         benefits: [
             "Fiabilité de l'information financière",
@@ -426,14 +428,15 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         ctaImage: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1000&auto-format&fit=crop",
         description: "Optimisation technologique des outils financiers, automatisation des tâches et mise en conformité avec les futures obligations de dématérialisation.",
         objectives: [
-            "Migration ERP et optimisation des outils",
-            "Dématérialisation et Facture Électronique 2026",
-            "Automatisation et Intelligence Artificielle"
+            "Sélection et implémentation d’outils finance",
+            "Automatisation et digitalisation adaptés aux besoins métiers",
+            "Réduire les tâches manuelles à faible valeur ajoutée",
+            "Améliorer la fiabilité et la qualité des données "
         ],
         deliverables: [
-            "Cartographie des outils (IT Landscape)",
-            "Cahier des charges et sélection ERP",
-            "Mise en place d'outils (OCR, RPA)",
+            "Préparation à la facturation électronique 2026 ",
+            "Intégration de l’IA dans les tâches répétitives ",
+            "Sélection, paramétrage et déploiement d’outils finance adaptés ",
             "Formation des équipes aux nouveaux outils"
         ],
         benefits: [
@@ -450,21 +453,22 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         ctaImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto-format&fit=crop",
         description: "Mise en place d'outils et de méthodes de pilotage permettant une vision claire, prédictive et orientée décision.",
         objectives: [
-            "Suivi du cash et prévisions",
-            "P&L et Budget",
-            "KPI et Performance"
+            "Définition des instances de pilotage et des comités adaptés aux besoins de la direction",
+            "Mise en place d'indicateurs de suivi KPI, KRI et autres",
+            "Construction ou fiabilisation du reporting (clôture, trésorerie, intercos, contrôles)",
+            "Mise en place des processus de collecte et organisation de la remontée d'information"
         ],
         deliverables: [
+            "Alignement des KPI avec les priorités de la direction",
+            "Suivi de la rentabilité (marge brute, EBITDA) ",
+            "Analyse du BFR et plans d’action sur la trésorerie ",
+            "Tableaux de bord sur mesure (Power BI) "
+        ],
+        benefits: [
             "Tableaux de bord de gestion dynamiques",
             "Budget prévisionnel et atterrissage",
             "Plan de trésorerie glissant",
             "Reporting mensuel automatisé"
-        ],
-        benefits: [
-            "Pilotage proactif de l'activité",
-            "Anticipation des écarts et risques",
-            "Meilleure communication financière",
-            "Culture du résultat partagée"
         ]
     },
     'expertises-avancees': {
@@ -474,15 +478,16 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         ctaImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Accompagnement spécialisé sur les enjeux financiers complexes, stratégiques ou à forte valeur ajoutée.",
         objectives: [
-            "Fiscalité et conformité",
-            "Harmonisation et reporting groupe",
-            "Croissance et levée"
+            "Opérations de restructuration financière",
+            "Fiabilisation des données à transmettre à un fonds / une banque",
+            "Mise à niveau de la fonction finance post-levée ",
+            "Accélération de la transformation post-reprise ou post-fusion "
         ],
         deliverables: [
+            "Préparation des présentations stratégiques et financières",
             "Dossier de financement bancaire/investisseur",
             "Reporting consolidé multi-entités",
-            "Revue fiscale et réglementaire",
-            "Documentation des prix de transfert"
+            "Revue fiscale et réglementaire"
         ],
         benefits: [
             "Sécurisation des opérations complexes",
