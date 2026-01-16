@@ -26,7 +26,17 @@ import imanImg from '@/../public/images/testimonials/Imane.png'
 import claireImg from '@/../public/images/testimonials/Claire.jpg'
 import michaelImg from '@/../public/images/testimonials/Michael.jpg'
 import thierryImg from '@/../public/images/testimonials/Thierry.png'
-
+import RefonteReportingImg from '@/../public/images/homePage/RefonteReporting.png'
+import AutomatisationImg from '@/../public/images/homePage/Automatisation.png'
+import virginieImg from '@/../public/images/aboutPage/VirginieAudrain.png'
+import nadiaImg from '@/../public/images/aboutPage/Nadia.png'
+import deploiementImg from '../../public/images/methodePage/Deploiement.png'
+import suiviImg from '@/../public/images/methodePage/Suivi.png'
+import auditCtaImage from '@/../public/images/expertisePage/auditctaImage.jpeg'
+import structurationCtaImage from '../../public/images/expertisePage/structurationCta.jpeg'
+import digitalisationCtaImg from '../../public/images/expertisePage/digitalisationCta.jpeg'
+import pilotageCtaImg from '@/../public/images/expertisePage/pilotageCta.jpeg'
+import expertisesCtaImg from '@/../public/images/expertisePage/expertisesCta.png'
 
 
 export const PARTNERS = [
@@ -127,7 +137,7 @@ export const CASE_STUDIES = [
     },
     {
         title: "Refonte du Reporting",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=400",
+        image: RefonteReportingImg,
         points: [
             "Implémentation de Finthesis ",
             "Tableaux de bord KPIs automatisés",
@@ -145,7 +155,7 @@ export const CASE_STUDIES = [
     },
     {
         title: "Automatisation Paie",
-        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600&h=400",
+        image: AutomatisationImg,
         points: [
             "Migration vers Silae",
             "Connexion comptable native",
@@ -253,14 +263,14 @@ export const ABOUT_PAGE_DATA = {
             name: "Virginie Audrain",
             role: "Co-fondatrice & Associée",
             desc: "Plus de 15 ans d'expérience en Direction comptable et transformation digitale des fonctions finance. Experte en structuration de processus comptable, déploiement d'outils finance et management d'équipes dans des environnements en forte croissance. Passionnée par l'optimisation opérationnelle des Direction finance dans la modernisation.",
-            image: "https://images.unsplash.com/photo-1716703741458-417a8d58f20e?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: virginieImg,
             linkedin: "#"
         },
         {
             name: "Nadia Souissi",
             role: "Co-fondatrice & Associée",
             desc: "Plus de 15 ans d'expérience en comptabilité générale et transformation digitale des services financiers. Experte en structuration de processus, dématérialisation et optimisation des systèmes comptables. Passionnée par l'automatisation intelligente et l'accompagnement des équipes vers plus d'efficacité opérationnelle.",
-            image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: nadiaImg,
             linkedin: "#"
         }
     ],
@@ -335,7 +345,7 @@ export const METHODOLOGY_PAGE_DATA = {
             subtitle: "Mise en œuvre technique",
             description: "Phase active de transformation : nettoyage des données, paramétrage des nouveaux outils, rédaction des procédures et mise en place des automatismes. Nous travaillons en immersion avec vos équipes.",
             benefits: ["Migration des données", "Configuration outils", "Documentation process"],
-            imgSrc: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+            imgSrc: deploiementImg
         },
         {
             id: 4,
@@ -351,7 +361,7 @@ export const METHODOLOGY_PAGE_DATA = {
             subtitle: "Amélioration continue",
             description: "La mission ne s'arrête pas au déploiement. Nous assurons un suivi mensuel pour analyser les premiers résultats, ajuster les paramétrages et ancrer les bonnes pratiques dans la durée.",
             benefits: ["Comités de pilotage", "Audit post-démarrage", "Plan de progrès"],
-            imgSrc: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+            imgSrc: suiviImg
         }
     ],
     advantages: [
@@ -376,7 +386,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         title: "Audit",
         icon: BarChart3,
         heroImage: auditHeroImg,
-        ctaImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto-format&fit=crop",
+        ctaImage: auditCtaImage,
         description: "Analyse complète de la situation financière et organisationnelle de l'entreprise afin d'identifier les forces, les faiblesses et les axes prioritaires d'amélioration.",
         objectives: [
             "Évaluation globale des processus financiers",
@@ -401,7 +411,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         title: "Structuration de la Fonction Finance",
         icon: Settings,
         heroImage: structurationHeroImg,
-        ctaImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000&auto-format&fit=crop",
+        ctaImage: structurationCtaImage,
         description: "Structuration, organisation et montée en maturité de la direction finance pour garantir fiabilité, rapidité et efficacité des opérations.",
         objectives: [
             "Cartographie et optimisation des processus",
@@ -426,7 +436,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         title: "Digitalisation et Automatisation",
         icon: Zap,
         heroImage: digitalisationHeroImg,
-        ctaImage: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1000&auto-format&fit=crop",
+        ctaImage: digitalisationCtaImg,
         description: "Optimisation technologique des outils financiers, automatisation des tâches et mise en conformité avec les futures obligations de dématérialisation.",
         objectives: [
             "Sélection et implémentation d’outils finance",
@@ -451,7 +461,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         title: "Pilotage Financier et Performance",
         icon: PieChart,
         heroImage: pilotageHeroImg,
-        ctaImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto-format&fit=crop",
+        ctaImage: pilotageCtaImg,
         description: "Mise en place d'outils et de méthodes de pilotage permettant une vision claire, prédictive et orientée décision.",
         objectives: [
             "Définition des instances de pilotage et des comités adaptés aux besoins de la direction",
@@ -476,7 +486,7 @@ export const EXPERTISE_DETAIL_DATA: Record<string, any> = {
         title: "Expertises Financières Avancées",
         icon: Rocket,
         heroImage: expertisesHeroImg,
-        ctaImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ctaImage: expertisesCtaImg,
         description: "Accompagnement spécialisé sur les enjeux financiers complexes, stratégiques ou à forte valeur ajoutée.",
         objectives: [
             "Opérations de restructuration financière",

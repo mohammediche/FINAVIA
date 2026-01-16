@@ -15,6 +15,7 @@ import {
 import {AccordionItem} from "@/components/ui/AccordionItem";
 import StandardCTA from "@/components/sections/StandardCTA";
 import symptomesImg from '../../../public/images/enjeuxClientsPage/symptomesFinance.jpg'
+import heroBgImg from '@/../public/images/enjeuxClientsPage/heroBackground.png'
 
 export default function ClientChallengesPage() {
     const [activeSector, setActiveSector] = useState('Direction Financière / DAF');
@@ -33,7 +34,7 @@ export default function ClientChallengesPage() {
             <section className="relative bg-[#07036e] text-white pt-48 pb-24 px-6 overflow-hidden rounded-b-[3rem]">
                 <FloatingStars color="white" />
                 <div className="absolute inset-0 z-0 opacity-20">
-                    <Image alt="Équipe financière concentrée en réunion stratégique" fill className="object-cover" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" />
+                    <Image alt="Équipe financière concentrée en réunion stratégique" fill className="object-cover" src={heroBgImg}/>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#07036e] via-[#07036e]/90 to-transparent z-0"></div>
 

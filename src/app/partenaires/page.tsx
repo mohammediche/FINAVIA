@@ -16,6 +16,7 @@ import {
 } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
 import partenairesHeroImg from '@/../public/images/partenairesPage/partenairesHero.jpeg'
+import bgHeroImg from '@/../public/images/partenairesPage/backgroundHeroSection.jpeg'
 
 export default function PartnersPage() {
     return (
@@ -24,7 +25,7 @@ export default function PartnersPage() {
             <section className="relative bg-[#07036e] text-white pt-48 pb-24 px-6 overflow-hidden rounded-b-[3rem]">
                 <FloatingStars color="white" />
                 <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-                    <Image alt="Modern financial software" fill className="object-cover" src="https://images.unsplash.com/photo-1571677246347-5040036b95cc" />
+                    <Image alt="Modern financial software" fill className="object-cover" src={bgHeroImg} />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#07036e] via-[#07036e]/90 to-transparent z-0 pointer-events-none"></div>
 

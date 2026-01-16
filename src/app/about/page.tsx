@@ -6,6 +6,7 @@ import { Linkedin, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { ABOUT_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
+import engagementsBgImg from '@/../public/images/aboutPage/EngagementsBaground.jpeg'
 
 export default function AboutPage() {
     return (
@@ -125,7 +126,7 @@ export default function AboutPage() {
                         alt="Lush green forest background representing ecology"
                         fill
                         className="object-cover"
-                        src="https://images.unsplash.com/photo-1591997520347-4e4615c4235e"
+                        src={engagementsBgImg}
                     />
                     <div className="absolute inset-0 bg-green-900/40 mix-blend-multiply"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>

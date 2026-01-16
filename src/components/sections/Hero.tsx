@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import mainHeroImg from '@/../public/images/homePage/homeMainHero.png'
 
 const Hero = () => {
     return (
@@ -110,7 +111,7 @@ const Hero = () => {
                     >
                         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src={mainHeroImg}
                                 alt="Financial consulting dashboard analysis by team"
                                 fill
                                 className="object-cover"

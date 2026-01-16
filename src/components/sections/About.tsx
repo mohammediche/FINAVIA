@@ -5,6 +5,7 @@ import { CheckCircle2, Award, Users, Rocket } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import Link from 'next/link';
 import Image from 'next/image';
+import decouvrezFinaviaImg from '@/../public/images/homePage/decouvrezFinavia.png'
 
 const About = () => {
     return (
@@ -27,7 +28,7 @@ const About = () => {
                     {/* Main Portrait Image */}
                     <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl">
                         <Image
-                            src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            src={decouvrezFinaviaImg}
                             alt="Portrait of a friendly financial consultant"
                             fill
                             className="object-cover"
