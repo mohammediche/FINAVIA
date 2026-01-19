@@ -25,24 +25,31 @@ const Navbar = () => {
     }, []);
 
     useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+    }, [pathname]);
+
+
+    useEffect(() => {
         setIsMobileMenuOpen(false);
+        window.scrollTo({ top: 0, left: 0 });
     }, [pathname]);
 
     return (
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-md py-4' : 'bg-transparent py-6'
-            }`}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+            ${
+            isScrolled || isMobileMenuOpen
+                ? 'bg-white shadow-md py-4 xl:bg-white/95 xl:backdrop-blur-lg'
+                : 'bg-transparent py-6'
+             }
+          `}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 <Link href="/" className="z-2000 relative hover:scale-105 transition-transform">
                     <Image
-                        src={isScrolled
-                            ? blackLogo
-                            : whiteLogo
-                        }
+                        src={isScrolled || isMobileMenuOpen ? blackLogo : whiteLogo}
                         alt="FINAVIA Logo"
                         width={140}
                         height={70}
