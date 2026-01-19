@@ -42,6 +42,13 @@ import expertisesCtaImg from '@/../public/images/expertisePage/expertisesCta.png
 export const PARTNERS = [
     { name: 'My report ', url:partnerImg1 },
     { name: 'Fygr', url: partnerImg2 },
+    { name: 'Sage', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/5ae5d4805971eee08b0a799442718c7f.png' },
+    { name: 'Pennylane', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/69b204c08a820f594710ee1bbe6e01ad.png' },
+    { name: 'Spendesk', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/d55b7eaa24d1489f1e171595fd9c26be.png' },
+    { name: 'Agicap', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c73c301d18e3913447042b755ed5c82b.png' },
+    { name: 'Regate', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/58c9aa638e910165c9d9a0a31919a77d.png' },
+    { name: 'Yooz', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/ac7ac7749038c0f772af6574de3e6035.png' },
+    { name: 'Finthesis', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c5fbdaf3e80a278c8ec084ef95e45a31.png' }
 
 ];
 
