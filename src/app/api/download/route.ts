@@ -1,33 +1,37 @@
 import { NextResponse } from 'next/server';
 import path from 'path';
-import fs from 'fs';
+import { readFile, stat } from 'fs/promises'; // Use promises for cleaner types
+import { existsSync } from 'fs';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(request: Request) {
+export async function GET() {
     console.log('➡️ DOWNLOAD ROUTE HIT');
 
     try {
         const filePath = path.join(process.cwd(), 'public', 'docs', 'guide-finavia.pdf');
 
-        if (!fs.existsSync(filePath)) {
+        if (!existsSync(filePath)) {
             console.error('❌ FILE NOT FOUND');
             return new Response('File not found', { status: 404 });
         }
 
-        // Explicitly tell TypeScript this is a Buffer
-        const fileBuffer = fs.readFileSync(filePath) as Buffer;
+        // 1. Get file size using stat (standard number)
+        const fileStats = await stat(filePath);
 
-        // Now .length will work without the red error
-        const fileSize = fileBuffer.length;
-        console.log('✅ File read, size:', fileSize);
+        // 2. Read file as a Buffer then convert to a Blob
+        // Blobs are universally accepted by the Response constructor
+        const fileBuffer = await readFile(filePath);
+        const blob = new Blob([fileBuffer], { type: 'application/octet-stream' });
 
-        return new Response(fileBuffer, {
+        console.log('✅ File ready, size:', fileStats.size);
+
+        return new Response(blob, {
             status: 200,
             headers: {
                 'Content-Type': 'application/octet-stream',
                 'Content-Disposition': 'attachment; filename="guide-finavia.pdf"',
-                'Content-Length': fileSize.toString(),
+                'Content-Length': fileStats.size.toString(),
                 'Cache-Control': 'no-store, no-cache, must-revalidate',
             },
         });
