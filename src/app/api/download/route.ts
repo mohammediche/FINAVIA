@@ -4,25 +4,32 @@ import fs from 'fs';
 
 export async function GET() {
     try {
-        // Path to your PDF in the public folder
+
         const filePath = path.join(process.cwd(), 'public', 'docs', 'guide-finavia.pdf');
 
-        // Check if file exists to prevent server crash
         if (!fs.existsSync(filePath)) {
-            return new NextResponse("File not found", { status: 404 });
+            console.error("PDF NOT FOUND AT PATH:", filePath);
+            return new NextResponse("Document non trouvé", { status: 404 });
         }
+
+        // 1. Get file stats to get the size (cleanest way to avoid .length errors)
+        const stats = fs.statSync(filePath);
+        const fileSize = stats.size;
 
         const fileBuffer = fs.readFileSync(filePath);
 
-        // Return the file with headers that FORCE download
+        // 4. Return the response with "Force Download" headers
         return new NextResponse(fileBuffer, {
             headers: {
-                'Content-Type': 'application/pdf',
-                // "attachment" tells the browser to download rather than preview
+                // 'application/octet-stream' prevents the browser from trying to 'preview' it
+                'Content-Type': 'application/octet-stream',
                 'Content-Disposition': 'attachment; filename="guide-finavia.pdf"',
+                'Content-Length': fileSize.toString(),
+                'Cache-Control': 'no-cache',
             },
         });
     } catch (error) {
-        return new NextResponse("Internal Server Error", { status: 500 });
+        console.error("Download error:", error);
+        return new NextResponse("Erreur serveur", { status: 500 });
     }
 }

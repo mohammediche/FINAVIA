@@ -15,7 +15,9 @@ export const ResourceClientTemplate = (data: ResourceFormData, pdfUrl: string) =
                             
                             <div style="margin: 40px 0;">
                                 <a href="${pdfUrl}" 
-                                   style="background-color: #e51990; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(229, 25, 144, 0.3);">
+                                   download="guide-finavia.pdf" 
+                                   target="_self"
+                                   style="background-color: #e51990; color: white; padding: 10px 20px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(229, 25, 144, 0.3);">
                                    TÉLÉCHARGER LE GUIDE PDF
                                 </a>
                             </div>
