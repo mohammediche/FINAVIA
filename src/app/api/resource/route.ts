@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     try {
         const body = await req.json();
         const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-        const pdfUrl = `${baseUrl}/api/download`;
+        const pdfUrl = `${baseUrl}/api/download?t=${Date.now()}`;
 
         // 1. Send to Client (The PDF)
         await sendEmail({

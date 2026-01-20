@@ -27,7 +27,9 @@ export async function GET() {
                 'Content-Type': 'application/octet-stream',
                 'Content-Disposition': 'attachment; filename="guide-finavia.pdf"',
                 'Content-Length': fileSize.toString(),
-                'Cache-Control': 'no-cache',
+                'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0',
             },
         });
     } catch (error) {
