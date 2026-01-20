@@ -20,7 +20,7 @@ export async function POST(req: Request) {
                 {
                     content: fileBuffer.toString('base64'),
                     name: 'guide-finavia.pdf',
-                    type: 'application/pdf'
+
                 }
             ];
         }
