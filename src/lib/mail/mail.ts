@@ -3,12 +3,12 @@ interface SendEmailProps {
     subject: string;
     htmlContent: string;
     replyTo?: { email: string; name: string };
+    attachment?: { content: string; name: string }[];
 }
 
-export async function sendEmail({ to, subject, htmlContent, replyTo }: SendEmailProps) {
+export async function sendEmail({ to, subject, htmlContent, replyTo, attachment }: SendEmailProps) {
     const apiKey = process.env.BREVO_API_KEY;
     const adminEmail = process.env.ADMIN_EMAIL;
-    
 
     if (!apiKey) throw new Error("BREVO_API_KEY is missing");
     if (!adminEmail) throw new Error("ADMIN_EMAIL is missing");
@@ -25,16 +25,18 @@ export async function sendEmail({ to, subject, htmlContent, replyTo }: SendEmail
             to,
             subject,
             htmlContent,
-            replyTo: replyTo || undefined
+            replyTo: replyTo || undefined,
+            attachment: attachment
         }),
     });
-    console.log("response???", response);
-    
 
     if (!response.ok) {
         const error = await response.json();
+        console.error("❌ BREVO ERROR:", error);
         throw new Error(error.message || "Failed to send email");
     }
 
-    return await response.json();
+    const result = await response.json();
+    console.log("✅ BREVO SUCCESS:", result);
+    return result;
 }

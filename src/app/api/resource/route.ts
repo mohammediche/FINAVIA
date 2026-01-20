@@ -1,30 +1,47 @@
 import { NextResponse } from 'next/server';
-import {sendEmail} from "@/lib/mail/mail";
-import {ResourceClientTemplate} from "@/lib/mail/templates/ResourceClient";
-import {ResourceAdminTemplate} from "@/lib/mail/templates/ResourceAdmin";
+import { sendEmail } from "@/lib/mail/mail";
+import { ResourceClientTemplate } from "@/lib/mail/templates/ResourceClient";
+import { ResourceAdminTemplate } from "@/lib/mail/templates/ResourceAdmin";
+import fs from 'fs';
+import path from 'path';
 
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-        const pdfUrl = `${baseUrl}/api/download?t=${Date.now()}`;
 
-        // 1. Send to Client (The PDF)
+        const filePath = path.join(process.cwd(), 'public', 'docs', 'guide-finavia.pdf');
+
+        let attachment = undefined;
+
+        if (fs.existsSync(filePath)) {
+            const fileBuffer = fs.readFileSync(filePath) as Buffer;
+
+            attachment = [
+                {
+                    content: fileBuffer.toString('base64'),
+                    name: 'guide-finavia.pdf',
+                    type: 'application/pdf'
+                }
+            ];
+        }
+
+        // Send to Client
         await sendEmail({
             to: [{ email: body.email, name: body.firstName }],
             subject: "📥 Votre Guide Stratégique Finavia",
-            htmlContent: ResourceClientTemplate(body, pdfUrl)
+            htmlContent: ResourceClientTemplate(body),
+            attachment: attachment
         });
 
-        // 2. Send to Admin (The Info)
+        // Send to Admin
         const adminEmail = process.env.ADMIN_EMAIL;
-        if (!adminEmail) throw new Error("ADMIN_EMAIL is missing");
-        
-        await sendEmail({
-            to: [{ email: adminEmail, name: "Admin" }],
-            subject: `🎁 Nouveau Lead PDF - ${body.company}`,
-            htmlContent: ResourceAdminTemplate(body)
-        });
+        if (adminEmail) {
+            await sendEmail({
+                to: [{ email: adminEmail, name: "Admin" }],
+                subject: `🎁 Nouveau Lead PDF - ${body.company}`,
+                htmlContent: ResourceAdminTemplate(body)
+            });
+        }
 
         return NextResponse.json({ success: true });
     } catch (error) {
