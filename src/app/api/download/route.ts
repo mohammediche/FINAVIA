@@ -4,6 +4,8 @@ import { readFile, stat } from 'fs/promises'; // Use promises for cleaner types
 import { existsSync } from 'fs';
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0; // Disable cache completely
+export const fetchCache = 'force-no-store'; // Ensure no fetch results are stored
 
 export async function GET() {
     console.log('➡️ DOWNLOAD ROUTE HIT');
