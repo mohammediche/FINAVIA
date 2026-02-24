@@ -16,6 +16,10 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const isHomePage = pathname === '/';
+    const isWhiteBgPage =
+        pathname.startsWith('/expertises/') ||
+        pathname === '/legales' ||
+        pathname.startsWith('/legales/');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,14 +34,8 @@ const Navbar = () => {
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }, [pathname]);
 
-    // LOGIC:
-    // 1. Navbar background: transparent until scroll (or mobile menu open)
     const showWhiteBg = isScrolled || isMobileMenuOpen;
-
-    // 2. Logo Color:
-    // - If it's the home page, it's ALWAYS black (because hero is white)
-    // - If it's other pages, it's white until scroll, then becomes black.
-    const useBlackLogo = isHomePage || isScrolled || isMobileMenuOpen;
+    const useBlackLogo = isHomePage || isWhiteBgPage || isScrolled || isMobileMenuOpen;
 
     return (
         <motion.nav

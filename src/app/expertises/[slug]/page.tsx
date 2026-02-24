@@ -45,13 +45,15 @@ export default function ExpertiseDetailPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* 1. Breadcrumb */}
-            <div className="bg-gray-50 border-b border-gray-100 pt-24">
+            <div className="bg-gray-50 border-b border-gray-100 pt-32">
                 <div className="max-w-7xl mx-auto px-6 py-4 text-sm text-gray-500 flex items-center gap-2">
                     <Link href="/" className="hover:text-[#07036e] flex items-center gap-1">
                         <Home size={14} /> Accueil
                     </Link>
                     <ChevronRight size={14} />
-                    <span className="text-gray-400">Expertises</span>
+                    <Link href="/expertises" className="hover:text-[#07036e] flex items-center gap-1">
+                         Expertises
+                    </Link>
                     <ChevronRight size={14} />
                     <span className="text-[#e51990] font-medium">{data.title}</span>
                 </div>
